@@ -118,5 +118,3 @@ In the src folder, you will find :
 
 You can also find a "util" folder containing basic functions used in the geometric_scaling.py
 
-**I have more questions!**
-
