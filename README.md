@@ -13,7 +13,7 @@ Just download the package, extract it in your working directory.
 
 Creating a virtual environment and installing those libraries is highly recommended
 
-with Conda/Miniconda: 
+1) With Conda/Miniconda: 
 From your terminal : enter the following command
 
 ```
