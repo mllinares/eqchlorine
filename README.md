@@ -16,7 +16,7 @@ Just download the package, extract it in your working directory.
 - scipy
 - colorama
 
-Creating a virtual environment and installing those libraries is highly recommended
+Creating a virtual environment to install those libraries is highly recommended
 
 1) With Conda/Miniconda: 
 From your terminal : enter the following command
@@ -26,6 +26,7 @@ conda create -n NAME_OF_YOUR_ENVIRONMENT
 conda activate NAME_OF_YOUR_ENVIRONMENT
 conda install numpy matplotlib scipy colorama
 ```
+
 **Check out your installation:**
 In your terminal, enter the following command :
 ```
