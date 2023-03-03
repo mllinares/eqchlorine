@@ -1,7 +1,8 @@
 # eqchlorine
 Python script to generate chlorine 36 profile on fault scarp
 
-**Install**
+Install
+-------
 Just download the package, extract it in your working directory.
 - Requirements :
 - Python 3.9
@@ -48,9 +49,8 @@ FAQ
 
 **Why go to Python ?**
 
-EQCHLORINE is just the fisrt step of a wider project : making an inversion
-algorithm in order to retrieve earthquake sequences. The heart of this project
-is to make a friendly user code to invert chlorine 36 data. Python was the obvious 
+EQCHLORINE is just the fisrt step of a wider project : Pymodelscarp. The heart Pymodelscarp project
+is to make a friendly user code to invert chlorine 36 data in order to retrieve earthquake sequences. Python was the obvious 
 choice because its large catalogue of libraries.
 EQCHLORINE will be the core of the inversion code, as it will be used as a forward function
 for the coming inversion code.
