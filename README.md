@@ -76,10 +76,11 @@ The chemistry of the colluvium must be stored in a "coll.txt" file
 The magnetic filed data must be stored in "sf.txt" file.
 For further formating see "format_you_data.pdf"
 
-**How do I use EQCHLORINE ?**
+**I am new to Python : How do I use EQCHLORINE ?**
 
-Make sure your "data.txt", "coll.txt" and "sf.txt" files are in the correct format.
-Copy your data files in your working directory (same directory of the "run_forward.py" file)
+Make sure your "data.txt", "coll.txt" and "sf.txt" files are in the correct format ('txt') and have the correct name:
+
+Copy your data files in the src directory
 Open "parameter.py" and enter your site parameters.
 Open "seismic_scenario.py" and set your earthquake sequence.
 
@@ -96,12 +97,14 @@ Few files will be created:
 - "results.txt" file will be created and will contain the resulting chlorine 36 concentration profile.
 - "plot.png" plot with the synthetic profile associated with the long-term history and the final chlorine 36 concentration profile.
 - "inputs.pckl" file, the input paramters you used to generate the profile
+You should find in "example" folder an example for the MA3 site located on the Magnola fault (Schlangenhauf et al. 2010).
 
 **What does my package contain ?**
 
 LICENSE.txt : the declared license
 README.md : the read_me file
 src : folder with the source code 
+example : example folder with data from Magnola Fault (Schlangenhauf et al. 2010)
 
 In the src folder, you will find :
 
@@ -116,3 +119,4 @@ In the src folder, you will find :
 You can also find a "util" folder containing basic functions used in the geometric_scaling.py
 
 **I have more questions!**
+
