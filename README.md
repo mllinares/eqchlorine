@@ -55,7 +55,7 @@ FAQ
 **Why go to Python ?**
 
 EQCHLORINE is just the fisrt step of a wider project : Pymodelscarp. The heart Pymodelscarp project
-is to make a friendly user code to invert chlorine 36 data in order to retrieve earthquake sequences. Python was the obvious 
+is to make a user-friendly code to invert chlorine 36 data in order to retrieve earthquake sequences. Python was the obvious 
 choice because its large catalogue of libraries.
 EQCHLORINE will be the core of the inversion code, as it will be used as a forward function
 for the coming inversion code.
