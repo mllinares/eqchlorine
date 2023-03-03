@@ -1,5 +1,10 @@
 # eqchlorine
-Python script to generate chlorine 36 profile on fault scarp
+Python script to generate chlorine 36 profile on fault scarp.
+
+EQCHLORINE is a python package designed to generate synthtic chlorine 36 concentration profiles associated to seismic sequence.
+This code is the adaptation in python of an earlier published code : Modelscarp (Schlagenhauf et al. 2010).
+Modelscarp (matlab) is the basis of many algorithm to retrieve earthquake sequence 
+with chlorine 36 sampling profiles on limestone. 
 
 Install
 -------
