@@ -80,11 +80,11 @@ For further formating see "format_you_data.pdf"
 
 Make sure your "data.txt", "coll.txt" and "sf.txt" files are in the correct format ('txt') and have the correct name:
 
-Copy your data files in the src directory
-Open "parameter.py" and enter your site parameters.
-Open "seismic_scenario.py" and set your earthquake sequence.
+- Copy your data files in the src directory
+- Open "parameter.py" and enter your site parameters.
+- Open "seismic_scenario.py" and set your earthquake sequence.
 
-1) From a terminal window, run the following command :
+1) From a terminal window, in src directory, run the following command :
 
 ```
 python3 run_forward.py
