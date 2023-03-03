@@ -2,7 +2,7 @@
 """
 Created on Tue Nov 29 11:47:42 2022
 
-@author: Maureen
+@author: Maureen Llinares
 """
 import geometric_scaling_factors
 import cl36_concentration as cl36
