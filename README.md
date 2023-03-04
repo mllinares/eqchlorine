@@ -16,7 +16,7 @@ Just download the package, extract it in your working directory.
 - scipy
 - colorama
 
-Creating a virtual environment to install those libraries is highly recommended
+Creating a virtual environment to install those libraries is highly recommended.
 
 With Conda/Miniconda: 
 
@@ -29,11 +29,13 @@ conda install numpy matplotlib scipy colorama
 ```
 
 **Check out your installation:**
+
 In your terminal, enter the following command :
 ```
 cd test
 python3 run_test.py
 ```
+
 
 Citation
 --------
