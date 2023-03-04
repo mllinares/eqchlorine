@@ -98,7 +98,7 @@ Few files will be created:
 
 - "results.txt" file will be created and will contain the resulting chlorine 36 concentration profile.
 - "plot.png" plot with the synthetic profile associated with the long-term history and the final chlorine 36 concentration profile.
-- "inputs.pckl" file, the input paramters you used to generate the profile
+
 Your plot should look like this : 
 
 ![alt text](https://github.com/mllinares/eqchlorine/blob/main/example/MA3/plot.png?raw=true)
