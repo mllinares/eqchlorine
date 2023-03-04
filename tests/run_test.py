@@ -10,3 +10,5 @@ import numpy
 import scipy
 import matplotlib
 import colorama
+
+print('All libraries are correctly installed')
