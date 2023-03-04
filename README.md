@@ -87,6 +87,7 @@ Two solutions are avaible to run the script :
 1) From a terminal window, in example directory, run the following command :
 
 ```
+cd MA3
 python3 run_forward.py
 ```
 
@@ -100,7 +101,7 @@ Few files will be created:
 - "inputs.pckl" file, the input paramters you used to generate the profile
 Your plot should look like this : 
 
-![alt text](https://github.com/mllinares/eqchlorine/blob/main/example/plot.png?raw=true)
+![alt text](https://github.com/mllinares/eqchlorine/blob/main/MA3/example/plot.png?raw=true)
 
 Using your own data files :
 Make sure your "data.txt", "coll.txt" and "sf.txt" files are in the correct format ('txt') and have the correct name:
