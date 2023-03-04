@@ -32,7 +32,7 @@ conda install numpy matplotlib scipy colorama
 
 In your terminal, enter the following command :
 ```
-cd test
+cd tests
 python3 run_test.py
 ```
 
