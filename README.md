@@ -62,7 +62,7 @@ EQCHLORINE will be the core of the inversion code, as it will be used as a forwa
 for the coming inversion code.
 
 
-**What changes with modelscarp ?**
+**What's different from modelscarp ?**
 
 - The package was reorganised for readibility and optimization purposes
 
@@ -71,21 +71,20 @@ and is now calculated as a function of the longterm relief
 
 **What is the format for the data files?**
 
-All your data files must be in .txt format. '/n'
-The chemistry of the samples must be stored in a "data.txt" file
-The chemistry of the colluvium must be stored in a "coll.txt" file
-The magnetic filed data must be stored in "sf.txt" file.
+All your data files must be in .txt format.
+- The chemistry of the samples must be stored in a "data.txt" file
+- The chemistry of the colluvium must be stored in a "coll.txt" file
+- The magnetic filed data must be stored in "sf.txt" file.
+
 For further formating see "format_you_data.pdf"
 
 **I am new to Python : How do I use EQCHLORINE ?**
 
-Make sure your "data.txt", "coll.txt" and "sf.txt" files are in the correct format ('txt') and have the correct name:
+First, give it a try with the example provided in "example" folder : the MA3 site located on the Magnola fault (Schlangenhauf et al. 2010).
 
-- Copy your data files in the src directory
-- Open "parameter.py" and enter your site parameters.
-- Open "seismic_scenario.py" and set your earthquake sequence.
+Two solutions are avaible to run the script :
 
-1) From a terminal window, in src directory, run the following command :
+1) From a terminal window, in example directory, run the following command :
 
 ```
 python3 run_forward.py
@@ -95,10 +94,22 @@ python3 run_forward.py
 Open "run_forward.py" and hit the run button
 
 Few files will be created:
+
 - "results.txt" file will be created and will contain the resulting chlorine 36 concentration profile.
 - "plot.png" plot with the synthetic profile associated with the long-term history and the final chlorine 36 concentration profile.
 - "inputs.pckl" file, the input paramters you used to generate the profile
-You should find in "example" folder an example for the MA3 site located on the Magnola fault (Schlangenhauf et al. 2010).
+Your plot should look like this : 
+
+![alt text](https://github.com/mllinares/eqchlorine/blob/main/example/plot.png?raw=true)
+
+Using your own data files :
+Make sure your "data.txt", "coll.txt" and "sf.txt" files are in the correct format ('txt') and have the correct name:
+
+- Copy your data files in the src directory
+- Open "parameter.py" and enter your site parameters.
+- Open "seismic_scenario.py" and set your earthquake sequence.
+
+Follow the same procedure as above, either from a terminal window or from an IDE
 
 **What does my package contain ?**
 
