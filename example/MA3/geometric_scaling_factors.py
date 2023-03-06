@@ -28,9 +28,10 @@ def neutron_scaling (params, constants, N_eq):
                  
         OUTPUTS : scaling_depth_rock, dictionary containing scaling factors for buried samples
                   scaling_depth_coll, dictionary containing scaling factors for the colluvium
-                  scaling_surf_rock, dictionary containing scaling factors for the exhumed samples """
+                  scaling_surf_rock, dictionary containing scaling factors for the exhumed samples
+                  scaling_factors, dictionnary caontaining the scaling factors"""
 
-    
+    scaling_factors={}
     Hfinal = params.Hfinal # preserved scarp height(cm)
     alpha = params.alpha # colluium dip (degrees)
     beta = params.beta # preserved scarp dip (degrees)
@@ -39,7 +40,7 @@ def neutron_scaling (params, constants, N_eq):
     rho_coll = params.rho_coll # colluvium mean density
     Lambda = constants['Lambda'] # True attenuation length for fast neutron (g.cm-2)
     
-    
+    # !!! Si et seulement si on met le scaling hors de forward !!!
     slip = np.zeros((N_eq))+(Hfinal/N_eq) # define slip vector
     # slip = np.array([0, 1200, 600, 200, 400]) # from scenario MA3
     
@@ -56,7 +57,7 @@ def neutron_scaling (params, constants, N_eq):
     for i in range (0,len(Zs)):    # loop on Zs
         S_S[i] = gscale.scsurf(Zs[i], Hfinal, Lambda, beta, gamma, rho_rock) 
         # S_S[i] = a 
- 
+    scaling_factors['S_S']=S_S
     """ DEPTH SCALING FOR NEUTRONS IN ROCK"""
     
     so_f_diseg = np.zeros(N_eq)  # initialization of so_f_d_iseg
@@ -90,7 +91,8 @@ def neutron_scaling (params, constants, N_eq):
     scaling_depth_rock['lambda_diseg'] = Lambda_f_diseg
     scaling_depth_rock['x_iseg'] = x # useful to check the succes of exp_fit
     scaling_depth_rock['y_iseg'] = y # useful to check the succes of exp_fit
-    
+    scaling_factors['so_f_diseg']=so_f_diseg
+    scaling_factors['Lambda_f_diseg']=Lambda_f_diseg
     """ DEPTH SCALING FOR NEUTRONS IN COLLUVIUM """
     
     # For beta infinite plane (used in B2 and C6):
@@ -112,7 +114,8 @@ def neutron_scaling (params, constants, N_eq):
     scaling_depth_coll['lambda_beta'] = Lambda_f_beta_inf 
     scaling_depth_coll['x'] = -Zbeta_inf*rho_coll # useful to check the succes of exp_fit
     scaling_depth_coll['y'] = S_D_beta_inf # useful to check the succes of exp_fit
-    
+    scaling_factors['so_f_beta_inf']=so_f_beta_inf
+    scaling_factors['Lambda_f_beta_inf'] = Lambda_f_beta_inf
     """ ROCK SCALING FOR NEUTRONS """
     
     e = np.arange(0, 101)  # e is in cm and perpendicular to scarp surface
@@ -127,5 +130,7 @@ def neutron_scaling (params, constants, N_eq):
     scaling_surf_rock['y'] = Se # useful to check the succes of exp_fit
     scaling_surf_rock['s_e'] = so_f_e
     scaling_surf_rock['lambda_e'] = Lambda_f_e
+    scaling_factors['so_f_e'] = so_f_e
+    scaling_factors['Lambda_f_e'] = Lambda_f_e
     
-    return scaling_depth_rock, scaling_depth_coll, scaling_surf_rock, S_S
+    return scaling_depth_rock, scaling_depth_coll, scaling_surf_rock, scaling_factors
