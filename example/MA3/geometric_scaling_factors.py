@@ -100,7 +100,7 @@ def neutron_scaling (params, constants, N_eq):
     Zbeta_inf = -Zbeta_inf  # initialization
     S_D_beta_inf = np.zeros(len(Zbeta_inf))
     
-    # ??? POURQUOI 2000 dans sc_depth (présent dans Shlagenhauf/Tesson) ???
+
     for i in range (0,len(Zbeta_inf)):     # loop on z
             S_D_beta_inf[i] = gscale.scdepth(Zbeta_inf[i], 2000, Lambda, alpha, beta, gamma, rho_rock, rho_coll) 
             # S_D_beta_inf[iv] = a 
