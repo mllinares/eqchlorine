@@ -17,8 +17,7 @@ import numpy as np
 param = parameters.param() # import site parameters
 
 """ First calculate scaling factors """
-depth_rock, depth_coll, surf_rock, S_S = geometric_scaling_factors.neutron_scaling(param, constants, len(seismic_scenario['ages']))
-
+scaling_depth_rock, scaling_depth_coll, scaling_surf_rock, scaling_factors = geometric_scaling_factors.neutron_scaling(param, constants, len(seismic_scenario['ages']))
 
 """ Then calculate 36Cl concentration due to long term history """
 cl36_long_term, h_longterm = cl36.long_term(param, constants, seismic_scenario, scaling_factors)
