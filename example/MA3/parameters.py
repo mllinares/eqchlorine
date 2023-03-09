@@ -19,8 +19,8 @@ class param:
         self.H_scarp = 2000 # height of preserved scarp (cm)
         self.trench_depth = 400 # trench depth (cm)
         self.long_term_relief = 500 * 1e2 # cumulative height due to long term history (cm)
-        self.data = np.loadtxt('data_3.csv', delimiter=';') # samples chemestry
-        self.coll = np.loadtxt('coll3.csv', delimiter=';') # colluvial wedge chemistry
+        self.data = np.loadtxt('data.txt') # samples chemestry
+        self.coll = np.loadtxt('coll.txt') # colluvial wedge chemistry
         self.sf = np.loadtxt('sf.txt') # scaling factors for neutrons and muons reactions
         
         
